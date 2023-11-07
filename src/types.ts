@@ -12,4 +12,8 @@ export type UserDataActionType = {
   }
 };
 
+export type GlobalStateType = {
+  user: UserDataType
+};
+
 export type Dispatch = ThunkDispatch<UserDataType, null, AnyAction>;
