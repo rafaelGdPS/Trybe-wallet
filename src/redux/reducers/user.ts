@@ -5,7 +5,7 @@ const INITIAL_STATE = {
   email: '',
 };
 
-const userReducer = (state = INITIAL_STATE, action: UserDataActionType) => {
+const user = (state = INITIAL_STATE, action: UserDataActionType) => {
   switch (action.type) {
     case UPDATE_USER_DATA:
       return {
@@ -17,4 +17,4 @@ const userReducer = (state = INITIAL_STATE, action: UserDataActionType) => {
   }
 };
 
-export default userReducer;
+export default user;
