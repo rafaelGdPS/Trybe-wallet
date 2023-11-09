@@ -8,6 +8,7 @@ export const FETCH_ERROR = 'FETCH_ERROR';
 export const FETCH_EXPENSES = 'FETCH_EXPENSES';
 export const REQUEST_EXPENSIVES = 'REQUEST_EXPENSIVES';
 export const ERROR_EXPENSIVES = 'ERROR_EXPENSIVES';
+export const DELETE_EXPENSES = 'DELETE_EXPENSES';
 
 export const updateUserData = (email : string) => ({
   type: UPDATE_USER_DATA,
@@ -34,6 +35,11 @@ export const fetchError = () => ({
   type: FETCH_ERROR,
 });
 
+export const deleteExpenses = (expenses: ObjectTypeWallet[]) => ({
+  type: DELETE_EXPENSES,
+  payload: expenses,
+});
+
 export const fecthWallet = () => {
   return async (dispatch: Dispatch) => {
     try {
@@ -42,9 +48,6 @@ export const fecthWallet = () => {
       const allCurrencies = Object.keys(data);
 
       const currencies = allCurrencies.filter((currency: string) => currency !== 'USDT');
-      console.log(data);
-      // const currencies = data.delete('USDT');
-      console.log(currencies);
       dispatch(fetchCurrencies(currencies));
     } catch (error) {
       dispatch(fetchError());
