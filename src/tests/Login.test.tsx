@@ -53,7 +53,7 @@ describe('Testando elementos do login', () => {
     const inputEmail = screen.getByTestId(testIdEmail);
     const inputPassword = screen.getByTestId(testIdPassword);
     const loginBtn = screen.getByRole('button', { name: 'Entrar' });
-
+    expect(loginBtn).toBeDisabled();
     await act(async () => {
       await userEvent.type(inputEmail, email);
       await userEvent.type(inputPassword, '123456');
