@@ -45,7 +45,7 @@ function Table() {
               <td>{totalValue.toFixed(2)}</td>
               <td>Real</td>
               <td>
-                <button>Editar</button>
+                <button data-testid="edit-btn">Editar</button>
                 {' '}
                 /
                 {' '}

@@ -49,6 +49,7 @@ export const fecthWallet = () => {
 
       const currencies = allCurrencies.filter((currency: string) => currency !== 'USDT');
       dispatch(fetchCurrencies(currencies));
+      console.log(currencies);
     } catch (error) {
       dispatch(fetchError());
     }
