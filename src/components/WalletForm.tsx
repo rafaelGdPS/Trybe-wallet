@@ -16,6 +16,7 @@ function WalletForm() {
   const data = useSelector((globalState: GlobalStateType) => globalState.wallet);
   const dispatch: Dispatch = useDispatch();
   const [inputValue, setInputValue] = useState<ObjectValuesType>(INITIAL_VALUE);
+  const [editBtn, setEditBtn] = useState(false);
 
   useEffect(() => {
     dispatch(fecthWallet());
@@ -37,6 +38,9 @@ function WalletForm() {
       id: inputValue.id + 1,
     }));
   };
+  // const handleEdit = (e: React.FormEvent<HTMLFormElement>) => {
+  //   const { id } = e.target
+  // }
 
   return (
     <>
@@ -99,7 +103,8 @@ function WalletForm() {
             <option value="Saúde">Saúde</option>
           </select>
         </label>
-        <button type="submit">Adicionar despesa</button>
+        {editBtn ? <button type="submit">Editar despesa</button>
+          : <button type="submit">Adicionar despesa</button>}
       </form>
       <div />
     </>

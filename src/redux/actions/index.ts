@@ -9,6 +9,7 @@ export const FETCH_EXPENSES = 'FETCH_EXPENSES';
 export const REQUEST_EXPENSIVES = 'REQUEST_EXPENSIVES';
 export const ERROR_EXPENSIVES = 'ERROR_EXPENSIVES';
 export const DELETE_EXPENSES = 'DELETE_EXPENSES';
+export const EDIT_EXPENSES = 'EDIT_EXPENSES';
 
 export const updateUserData = (email : string) => ({
   type: UPDATE_USER_DATA,
@@ -38,6 +39,10 @@ export const fetchError = () => ({
 export const deleteExpenses = (expenses: ObjectTypeWallet[]) => ({
   type: DELETE_EXPENSES,
   payload: expenses,
+});
+
+export const editExpenses = (id: number) => ({
+  type: EDIT_EXPENSES,
 });
 
 export const fecthWallet = () => {

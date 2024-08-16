@@ -31,13 +31,6 @@ describe('Testatndo cabeçalho', () => {
     expect(inputCurrency).toBeInTheDocument();
     expect(store.getState().wallet.expenses.length).toBe(0);
 
-    // expect(store.getState().wallet.currencies).toEqual([
-    //   'USD', 'CAD', 'GBP',
-    //   'ARS', 'BTC', 'LTC',
-    //   'EUR', 'JPY', 'CHF',
-    //   'AUD', 'CNY', 'ILS',
-    //   'ETH', 'XRP', 'DOGE',
-    // ]);
     await act(async () => {
       await userEvent.type(inputValue, '500');
       await userEvent.type(inputDescription, 'roupas');

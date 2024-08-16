@@ -17,7 +17,7 @@ export default defineConfig({
       exclude: [
         "node_modules/*",
         "src/main.ts",
-        "src/redux/*",
+        "src/redux/index.ts",
         "src/tests/*",
       ],
       provider: 'c8'

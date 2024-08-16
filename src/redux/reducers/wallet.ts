@@ -1,5 +1,6 @@
 import { AnyAction } from 'redux';
 import { DELETE_EXPENSES,
+  EDIT_EXPENSES,
   FETCH_CURRENCIES, FETCH_ERROR, FETCH_EXPENSES, REQUEST_FETCH } from '../actions';
 
 const initialState = {
@@ -37,6 +38,12 @@ const wallet = (state = initialState, action: AnyAction) => {
       return {
         ...state,
         expenses: action.payload,
+      };
+    }
+    case EDIT_EXPENSES: {
+      return {
+        ...state,
+
       };
     }
     default:

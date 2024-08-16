@@ -67,6 +67,11 @@ export type WalletDataActionType = {
   }
 };
 
+export type EditBtnType = {
+  editButton: boolean,
+  editId: number
+};
+
 export type GlobalStateType = {
   user: UserDataType
   wallet: WalletDataType
